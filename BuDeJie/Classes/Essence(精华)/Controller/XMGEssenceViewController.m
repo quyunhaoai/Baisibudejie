@@ -57,6 +57,26 @@
     [self addChildViewController:[[XMGVoiceViewController alloc] init]];
     [self addChildViewController:[[XMGPictureViewController alloc] init]];
     [self addChildViewController:[[XMGWordViewController alloc] init]];
+    
+//    XMGAllViewController *all = [[XMGAllViewController alloc] init];
+//    all.type = XMGTopicTypeAll;
+//    [self addChildViewController:all];
+//    
+//    XMGVideoViewController *video = [[XMGVideoViewController alloc] init];
+//    video.type = XMGTopicTypeVideo;
+//    [self addChildViewController:video];
+//    
+//    XMGVoiceViewController *voice = [[XMGVoiceViewController alloc] init];
+//    voice.type = XMGTopicTypeVoice;
+//    [self addChildViewController:voice];
+//    
+//    XMGPictureViewController *picture = [[XMGPictureViewController alloc] init];
+//    picture.type = XMGTopicTypePicture;
+//    [self addChildViewController:picture];
+//    
+//    XMGWordViewController *word = [[XMGWordViewController alloc] init];
+//    word.type = XMGTopicTypeWord;
+//    [self addChildViewController:word];
 }
 
 /**
@@ -248,6 +268,7 @@
 - (void)addChildVcViewIntoScrollView:(NSUInteger)index
 {
     UIViewController *childVc = self.childViewControllers[index];
+    
     // 如果view已经被加载过，就直接返回
     if (childVc.isViewLoaded) return;
     

@@ -41,7 +41,7 @@ static NSString * const ID = @"cell";
         _totalSize = totalSize;
         
         [self.tableView reloadData];
-             
+        
         [SVProgressHUD dismiss];
     }];
 }

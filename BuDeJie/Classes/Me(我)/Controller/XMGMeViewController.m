@@ -149,7 +149,6 @@ static CGFloat const margin = 1;
     
     // 注册cell
     [collectionView registerNib:[UINib nibWithNibName:@"XMGSquareCell" bundle:nil] forCellWithReuseIdentifier:ID];
-//    [collectionView regi]
 }
 
 #pragma mark - UICollectionViewDelegate

@@ -10,6 +10,7 @@
 #import "XMGTopic.h"
 #import <UIImageView+WebCache.h>
 #import <AFNetworking.h>
+#import "XMGSeeBigPictureViewController.h"
 
 @interface XMGTopicVideoView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -23,6 +24,19 @@
 - (void)awakeFromNib
 {
     self.autoresizingMask = UIViewAutoresizingNone;
+    
+    self.imageView.userInteractionEnabled = YES;
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPicture)]];
+}
+
+/**
+ *  查看大图
+ */
+- (void)seeBigPicture
+{
+    XMGSeeBigPictureViewController *vc = [[XMGSeeBigPictureViewController alloc] init];
+    vc.topic = self.topic;
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)setTopic:(XMGTopic *)topic

@@ -35,6 +35,9 @@
     
     // 4.开始监控网络状况
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    // 5.每次启动程序，都清除过期的图片
+//    [[SDImageCache sharedImageCache] cleanDisk];
     return YES;
 }
 

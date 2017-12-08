@@ -29,9 +29,8 @@
 - (void)awakeFromNib
 {
     UIImage *image = _loginRegisterButton.currentBackgroundImage;
-//    UIImage *imageS= _loginRegisterButton.currentImage;
-    image = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
     
+    image = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
     
    // 让按钮背景图片不要被拉伸
     [_loginRegisterButton setBackgroundImage:image forState:UIControlStateNormal];
